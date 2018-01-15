@@ -52,7 +52,11 @@ function deAES(key, str) {
 }
 
 const stats = (req, res) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    //res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
+    res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+
     req.url = (req.url === '/') ? '/index.html' : req.url;
     fs.readFile(__dirname + '/web' + req.url, (err, buf) => {
         if (err) {
